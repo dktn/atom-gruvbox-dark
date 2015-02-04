@@ -1,21 +1,21 @@
 {
-  "name": "gruvbox-dark",
+  "name": "gruvbox-dark-ryanmt",
   "theme": "syntax",
   "version": "0.1.0",
   "private": true,
   "description": "A Gruvbox inspired syntax theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmfk/atom-gruvbox-dark"
+    "url": "https://github.com/ryanmt/atom-gruvbox-dark"
   },
   "author": {
-    "name": "Keith Kirk"
+    "name": "Ryan Taylor"
   },
   "readme": "# Atom Gruvbox Dark Syntax Theme\n\n Inspired from the Vim [Gruvbox Theme](https://github.com/morhetz/gruvbox)\n\n ![](https://www.dropbox.com/s/ivocue2d16r8xby/atom-gruvbox-dark.png)",
   "bugs": {
-    "url": "https://github.com/kmfk/atom-gruvbox/issues"
+    "url": "https://github.com/ryanmt/atom-gruvbox/issues"
   },
-  "homepage": "https://github.com/kmfk/atom-gruvbox",
+  "homepage": "https://github.com/ryanmt/atom-gruvbox",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

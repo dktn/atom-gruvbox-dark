@@ -16,18 +16,18 @@
 
 .block-cursor(@visibility: visible) {
   border: 0;
-  background-color: @base00;
+  background-color: @base0;
   visibility: @visibility;
   opacity: 0.5;
 }
 
 // Editor Syntax Styles
-.editor-colors {
+.atom.text-editor {
   background-color: @base03;
   color: @base3;
 }
 
-.editor {
+.atom-text-editor {
   .invisible-character {
     color: @base01;
   }
@@ -38,7 +38,7 @@
   }
 
   .gutter {
-    background-color: @base03;
+    background-color: @base02;
   }
 
   .gutter .line-number {
@@ -52,7 +52,10 @@
   }
 
   .cursor {
-    border-color: @base3;
+    border-color: @base03;
+    background-color: @orange;
+    width: 7px !important;
+    visibility: visible;
   }
 
   .selection .region {
@@ -71,7 +74,7 @@
   }
 }
 
-.bracket-matcher {
+.bracket-matcher .region {
   background-color: @base3;
   opacity: 0.3;
 }
