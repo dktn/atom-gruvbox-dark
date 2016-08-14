@@ -2,11 +2,10 @@
   "name": "gruvbox-dktn-syntax",
   "theme": "syntax",
   "version": "0.2.2",
-  "private": true,
   "description": "A Gruvbox inspired syntax theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dktn/atom-gruvbox-dktn"
+    "url": "https://github.com/dktn/gruvbox-dktn-syntax"
   },
   "author": {
     "name": "Adam Szlachta"
