@@ -112,7 +112,7 @@ atom-text-editor .search-results .marker.current-result .region,
   color: @constant; // haskell
 
   &.character.escape {
-    color: @cyan;
+    color: @string-escape;
   }
 
   &.numeric {
@@ -362,6 +362,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.raw.inline {
     color: @green;
+    text-decoration: underline;
   }
 }
 
