@@ -64,67 +64,69 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .comment {
-  // color: @text-light;
-  color: @text-dark;
+  color: @text-dark; // haskell
 }
 // COMMENTS are here
 
-.entity {
-  &.name.type {
-    // color: @light-orange;
-    color: @greenish;
-    // text-decoration: underline;
-  }
-
-  &.other.inherited-class {
-    color: @orange;
-  }
-}
-
 .keyword {
-  color: @red;
-  // color: @green;
+  color: @keyword;
 
   &.control {
-    color: @red;
+    color: @keyword; // haskell: do, case, of
   }
 
   &.operator {
-    color: @syntax-operator-color;
-    // color: @syntax-text-color;
+    color: @operator; // haskell
   }
 
-  &.other.special-method {
-    color: @blue;
+  &.other {
+    color: @keyword;
+
+    &.special-method {
+      color: @blue;
+    }
+
+    &.unit {
+      color: @orange;
+      text-decoration: underline;
+    }
   }
 
-  &.other.unit {
-    color: @orange;
-  }
 }
 
 .storage {
-  // color: @pink;
-  color: @blueish;
+  color: @data-type-keyword; // haskell
+
+  &.type {
+    //   color: @red;
+    //   text-decoration: underline;
+
+      &.class {
+          color: @pink;
+          text-decoration: underline;
+      }
+  }
 }
 
 .constant {
-  color: @orange;
+  color: @constant; // haskell
 
   &.character.escape {
     color: @cyan;
   }
 
   &.numeric {
-    color: @greenish-int;
+    color: @numeric; // haskell
   }
 
   &.other.color {
     color: @cyan;
+    text-decoration: underline;
   }
 
   &.other.symbol {
     color: @green;
+    text-decoration: underline;
   }
 }
 
@@ -139,7 +141,9 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @syntax-color-function-params
   }
   &.other {
-    color: @syntax-color-other;
+    color: @type-variable; // haskell
+    // text-decoration: underline;
+
     &.instance {
       color: @blue;
     }
@@ -152,11 +156,11 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .string {
-  color: @blueish-int;
+  color: @string; // haskell
 
 
   &.regexp {
-    color: @cyan;
+    color: @string-regexp; // haskell
 
     .source.ruby.embedded {
       color: @orange;
@@ -165,28 +169,30 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.other.link {
     color: @red;
+    text-decoration: underline;
   }
 }
 
 .punctuation {
   &.definition {
     &.comment {
-      color: @text-dark;
-    //   color: @light-gray;
+      color: @text-dark; // haskell
     }
 
     &.string {
-      color: @blueish-int;
+      color: @string; // haskell
     }
     &.variable,
     &.parameters,
     &.array {
       color: @syntax-text-color;
+      text-decoration: underline;
     }
 
     &.heading,
     &.identity {
       color: @blue;
+      text-decoration: underline;
     }
 
     &.bold {
@@ -206,51 +212,64 @@ atom-text-editor .search-results .marker.current-result .region,
 
 }
 
+// .identifier { // haskell:any identifier
+// }
+
 .support {
   &.class {
-    color: @light-orange;
+    color: @build-in-type; // haskell
   }
 
   &.function  {
-    color: @soft-orange;
-    // color: @greenish2;
-    // color: @cyan;
+    color: @build-in-function; // haskell
 
     &.any-method {
       color: @blue;
+      text-decoration: underline;
     }
   }
   &.other.module {
-    color: @blue;
+    color: @module; // haskell
   }
 }
 
 .entity {
+  &.name.type {
+    color: @data-type; // haskell
+    // text-decoration: underline;
+  }
+  // &.other {
+  //   text-decoration: underline;
+  // }
+
+  &.other.inherited-class {
+    color: @deriving-classes; // haskell
+  }
+
   &.name.function {
-    color: @green;
-    // color: @blue;
+    color: @function; // haskell
   }
 
   &.name.class, &.name.type.class {
     color: @light-orange;
+    text-decoration: underline;
   }
 
   &.name.section {
     color: @blue;
+    text-decoration: underline;
   }
 
   &.name.tag {
-    // color: @greenish2;
-    color: @soft-orange;
-    // color: @red;
-    // text-decoration: underline;
+    color: @constructor; // haskell
   }
 
   &.other.attribute-name {
-    color: @orange;
+    color: @property; // haskell
 
     &.id {
       color: @blue;
+      text-decoration: underline;
     }
   }
 }
@@ -258,6 +277,13 @@ atom-text-editor .search-results .marker.current-result .region,
 .meta {
   &.class {
     color: @light-orange;
+  }
+
+  &.declaration { // haskell: whole declaration
+      &.class {
+      }
+      &.instance {
+      }
   }
 
   &.link {
@@ -275,6 +301,23 @@ atom-text-editor .search-results .marker.current-result .region,
   &.separator {
     background-color: @gray;
     color: @syntax-text-color;
+  }
+
+  &.function {
+      color: @pink; // haskell:operators in type signature if type-signature not defined
+  }
+
+  &.ctor {
+      color: @pink;
+      text-decoration: underline;
+  }
+
+  &.record-field { // haskell: whole record field
+    //   text-decoration: underline;
+  }
+
+  &.type-signature { // haskell:operators in type signature
+      color: @operators-type-signature;
   }
 }
 
