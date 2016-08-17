@@ -1,5 +1,5 @@
-# Atom Gruvbox Dark Syntax Theme
+# Atom Gruvbox Dark Low Contrast Dktn Syntax Theme
 
-Inspired from the Vim [Gruvbox Theme](https://github.com/morhetz/gruvbox)
+Inspired by [Gruvbox Theme](https://github.com/morhetz/gruvbox) and [Gruvbox Dark Ryanmt](https://atom.io/themes/gruvbox-dark-ryanmt)
 
-![](./atom-gruvbox-dark.png)
+![](./dktn-theme.png)
