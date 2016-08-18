@@ -120,12 +120,12 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.color {
-    color: @cyan;
+    color: magenta; //@cyan;
     text-decoration: underline;
   }
 
   &.other.symbol {
-    color: @green;
+    color: pink; //@green;
     text-decoration: underline;
   }
 }
@@ -184,14 +184,14 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.variable,
     &.parameters,
-    &.array {
-      color: @syntax-text-color;
-      text-decoration: underline;
+    &.array { // lua
+      color: lighten(@syntax-text-color, 8%);
+    //   text-decoration: underline;
     }
 
     &.heading,
     &.identity {
-      color: @blue;
+      color: pink; //@blue;
       text-decoration: underline;
     }
 
@@ -227,9 +227,9 @@ atom-text-editor .search-results .marker.current-result .region,
   &.function  {
     color: @build-in-function; // haskell
 
-    &.any-method {
+    &.any-method { // lua
       color: @blue;
-      text-decoration: underline;
+    //   text-decoration: underline;
     }
   }
   &.other.module {
@@ -272,7 +272,7 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @property; // haskell
 
     &.id {
-      color: @blue;
+      color: magenta; //@blue;
       text-decoration: underline;
     }
   }
@@ -365,7 +365,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.raw.inline {
-    color: @green;
+    color: pink; //@green;
     text-decoration: underline;
   }
 }
